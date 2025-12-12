@@ -1,0 +1,15 @@
+ultralytics
+albumentations
+wandb
+onnx
+onnx-simplifier
+onnxruntime-gpu
+tensorrt
+pycuda
+numpy
+opencv-python
+fastapi
+uvicorn
+python-multipart
+scikit-learn
+supervision
