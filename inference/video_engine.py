@@ -142,7 +142,14 @@ class VideoEngine:
 if __name__ == "__main__":
     # Example usage
     import sys
-    source = 0 if len(sys.argv) < 2 else sys.argv[1]
+    source = 0 
+    if len(sys.argv) > 1:
+        arg = sys.argv[1]
+        # Check if argument is a digit (webcam index)
+        if arg.isdigit():
+            source = int(arg)
+        else:
+            source = arg
     # Fix Model Path: Resolve relative to this script
     model_path = os.path.join(os.path.dirname(__file__), "..", "models", "yolov8n.pt")
     if not os.path.exists(model_path):
